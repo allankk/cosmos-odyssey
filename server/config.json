@@ -1,0 +1,13 @@
+{
+    "serverPort": 5000,
+    "useLocalDB": false,
+    "remoteDBURL": "mongodb+srv://cosmos-test:cosmos@cosmos-1.lakg1il.mongodb.net/?retryWrites=true&w=majority",
+    "localDB": {
+        "dbHost": "127.0.0.1",
+        "dbPort": "27017"
+    },
+    "dbName": "cosmos-odyssey",
+    "dbCollections": [ "priceLists", "Bookings" ],
+    "priceLists": 15,
+    "endpointURL": "https://cosmos-odyssey.azurewebsites.net/api/v1.0/TravelPrices"
+}
