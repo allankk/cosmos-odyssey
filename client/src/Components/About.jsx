@@ -16,7 +16,7 @@ function About() {
                 </div>
             </div>
             <p className="italic">Allan Kossas 2022</p>
-            <a href="https://github.com/allankk" className="bg-white my-4 px-10 py-2 text-black rounded-full shadow-lg hover:text-white hover:bg-indigo-800 border hover:border-indigo-700"><span>Github</span></a>
+            <a href="https://github.com/allankk/cosmos-odyssey" className="bg-white my-4 px-10 py-2 text-black rounded-full shadow-lg hover:text-white hover:bg-indigo-800 border hover:border-indigo-700"><span>Github</span></a>
         </div>
     )
 }

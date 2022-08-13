@@ -1,4 +1,3 @@
-import './App.css';
 import MainSearch from "./Components/MainSearch";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BookFlight from "./Components/BookFlight/BookFlight";

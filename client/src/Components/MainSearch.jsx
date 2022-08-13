@@ -72,7 +72,7 @@ function MainSearch() {
                 <Select className="sm:w-1/4 shadow-md" styles={customStyle} options={origins} value={originChoice} onChange={choice => setOriginChoice(choice, getRoutes(choice.value, priceList.legs))}/>
                 <div className="flex justify-center items-center px-2 my-2">DESTINATION</div>
                 <Select className="sm:w-1/4 text-black shadow-md" options={destinations} value={destinationChoice} onChange={(choice) => setDestinationChoice(choice)}/>
-                <button className="sm:w-1/6 my-4 py-2 sm:my-0 sm:mx-4 bg-white text-black rounded-full shadow-md enabled:hover:text-white enabled:hover:bg-indigo-800" onClick={handleShowResults} disabled={(!destinationChoice) ? true : false}>search</button>
+                <button className="md:max-w-xs sm:w-1/6 my-4 py-2 sm:my-0 sm:mx-4 bg-white text-black rounded-full shadow-md enabled:hover:text-white enabled:hover:bg-indigo-800" onClick={handleShowResults} disabled={(!destinationChoice) ? true : false}>search</button>
             </div>
             {/* If the search button is pressed, show the route table */}
             {
