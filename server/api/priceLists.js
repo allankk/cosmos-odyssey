@@ -32,7 +32,6 @@ const getLatestPriceList = async () => {
     return result[0];
 }
 
-
 module.exports = {
     getNewPriceList,
     getLatestPriceList

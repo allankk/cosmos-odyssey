@@ -6,10 +6,8 @@ const db = require('./connection').getDB();
 
 let maxPriceLists = CONFIG.priceLists;
 
-
 // inserts a price list to the database
 const insertPriceList = async (priceList) => {
-
     await db.collection("priceLists").insertOne(priceList, function(err, res) {
         if (err) throw err;
         console.log("priceList inserted to the database");
@@ -17,12 +15,10 @@ const insertPriceList = async (priceList) => {
 
     // remove old price list and bookings related to the pricelist
     await deleteOldPriceLists();
-
 }
 
 // deletes the oldest price list if there is more than the set amount in the config. 
 const deleteOldPriceLists = async () => {
-
     try {
         let priceListCount = await db.collection("priceLists").countDocuments();
         
@@ -36,12 +32,10 @@ const deleteOldPriceLists = async () => {
     } catch (err) {
         console.log(err);
     }
-
 }
 
 // compares the given pricelist with the latest pricelist in the database
 const checkValidity = async (priceListID) => {
-
     const priceListsAPI = require('../api/priceLists');
     let priceList = await priceListsAPI.getLatestPriceList();
 
@@ -50,9 +44,7 @@ const checkValidity = async (priceListID) => {
     } else {
         return true;
     }
-
 }
-
 
 module.exports = {
     checkValidity,

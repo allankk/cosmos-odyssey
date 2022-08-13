@@ -2,7 +2,6 @@ const db = require('./connection').getDB();
 
 // inserts a price list to the database into the collection 'priceLists'
 const insertBooking = async (user) => {
-
     await db.collection("Bookings").updateOne(
         { firstName: user.firstName, lastName: user.lastName },
         { $push: {bookings: user.bookings}},
@@ -16,7 +15,6 @@ const insertBooking = async (user) => {
 
 // initializes a new person document in the collection.
 const createPerson = (user) => {
-
     db.collection("Bookings").insertOne({
         firstName: user.firstName,
         lastName: user.lastName,
@@ -32,7 +30,6 @@ const createPerson = (user) => {
 
 // returns all the bookings in the database
 const getAllBookings = async () => {
-    
     try {
         result = await db.collection("Bookings").find().toArray();
     } catch (err) {
@@ -74,7 +71,6 @@ const deleteOldBookings = async (priceListID) => {
 
 // deletes users that have no more bookings from the database
 const deleteOldUsers = () => {
-    
     try {
         db.collection("Bookings").deleteMany( { "bookings": [] } );
     } catch (e) {
@@ -85,7 +81,6 @@ const deleteOldUsers = () => {
 
 
 const updateTotalquotes = async () => {
-
     db.collection("Bookings").find().forEach( user => {
         let totalPrice = 0;
         let totalTravelTime = 0;

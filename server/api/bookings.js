@@ -15,7 +15,6 @@ const postBookFlight = async (user) => {
             }
         });
     }
-
     return isValid;
 }
 

@@ -1,12 +1,8 @@
 const { MongoClient } = require('mongodb');
 const CONFIG = require('../config.json');
 
-// Connect to a local mondoDB database:
-//let url = `mongodb://${CONFIG.dbHost}:${CONFIG.dbPort}/${CONFIG.dbName}`;
-
-// Connect to a mongoDB Atlas database:
 let url;
-
+// Connect to a mongoDB Atlas database:
 if (CONFIG.useLocalDB) {
     url = `mongodb://${CONFIG.localDB.dbHost}:${CONFIG.localDB.dbPort}/${CONFIG.dbName}`;
 } else {
@@ -14,7 +10,6 @@ if (CONFIG.useLocalDB) {
 }
 
 let db;
-
 // connect to the database
 const loadDatabase = async () => {
     try {
