@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 function BookingForm(props) {
-
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
@@ -34,7 +33,7 @@ function BookingForm(props) {
     
     const handleSubmit = (evt) => {
         evt.preventDefault();
-  
+
         if (!firstName || !lastName) {
             setErrorMessage("Please enter your name to book the flight");
         } else {
@@ -43,7 +42,6 @@ function BookingForm(props) {
                 lastName: lastName,
                 bookings: {...props}
             };
-
             sendPOST(bookingInformation);
         }
     }

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 
+// Navigation bar
 function Nav() {
-
     return (
         <nav className="mx-4 mb-4 sm-mb-20 pt-4 h-auto sm-h-20 flex flex-col sm:flex-row items-center">
             <Link to='/' className="font-bold mb-4 sm:mb-0 border-b border-transparent">

@@ -1,4 +1,3 @@
-
 // retrieve the time difference for flight times. Inputs in ISO format. Returns string in '? d ? h ? min' format
 const findDifference = (isoDateDeparture, isoDateArrival) => {
     let date1 = new Date(isoDateDeparture);
@@ -9,6 +8,7 @@ const findDifference = (isoDateDeparture, isoDateArrival) => {
     return difference;
 }
 
+// returns the duration in '? d ? h ? min' format. Input is time in milliseconds.
 const formatDuration = (difference) => {
 
     let diffRemaining = difference;
@@ -22,6 +22,7 @@ const formatDuration = (difference) => {
     return (`${days} d ${hours} h ${minutes} min`);
 }
 
+// Formats the time to be displayable to the user.
 const formatTime = (date) => {
     let formDate = new Date(date);
 
@@ -36,6 +37,7 @@ const formatTime = (date) => {
     return result;
 }
 
+// returns a date object from an ISO formatted date
 const createDate = (isoDate) => {
     let date = new Date(isoDate);
     return date;

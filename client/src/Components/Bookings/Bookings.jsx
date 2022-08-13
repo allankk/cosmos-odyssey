@@ -5,19 +5,13 @@ import axios from 'axios';
 import UserBookings from './UserBookings';
 import { useLocation } from 'react-router-dom';
 
+// Main page for /booking path.
 function Bookings(props) {
-
     const [allBookings, setAllBookings] = useState([]);
 
     const location = useLocation();
 
-// First Name
-// Last Name
-// Route(s)
-// Total QUoted Price
-//  Total quoted travel time
-// transportation company names
-
+    // sends an API request to the server to receive an object with all users and bookings
     const getAllBookings = async () => {
         const response = await axios.get('http://localhost:5000/api/all-bookings');
         const body = await response.data;

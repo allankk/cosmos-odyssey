@@ -3,10 +3,11 @@ import Route from './Route';
 import uniqid from 'uniqid';
 import { formatDuration } from '../../helpers/flightTime';
 
+// component of a specific user
 function UserBookings(props) {
-
     const [isClicked, setIsClicked] = useState(props.showDetails);
 
+    // renders each booking of the current user separately
     const renderRoutes = () => {
         if (isClicked) {
             return props.userData.bookings.map(route => {
@@ -15,6 +16,7 @@ function UserBookings(props) {
         }
     }
 
+    // renders the summarized info (total price, total flight time) about the current user.
     const renderSummarizedInfo = () => {
         if (isClicked) {
             return (
@@ -43,10 +45,3 @@ function UserBookings(props) {
 }
 
 export default UserBookings;
-
-/*
-
-props.userData.totalPrice
-props.userData.totalTravelTime
-
-*/

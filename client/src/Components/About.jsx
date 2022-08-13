@@ -1,7 +1,7 @@
 import React from "react";
 
+// Main page for /about path
 function About() {
-
     return (
         <div className="mt-6 sm:mt-20 flex flex-col items-center justify-center w-full md:w-[48rem] mx-auto">
             <div className="my-6">

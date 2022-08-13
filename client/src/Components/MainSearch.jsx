@@ -6,6 +6,7 @@ import { formatTime, createDate } from "../helpers/flightTime";
 import Select from 'react-select';
 import customStyle from '../styles/select';
 
+// main page for "/" path. 
 function MainSearch() {
     // currently valid priceList
     const [priceList, setPriceList] = useState({});
@@ -66,8 +67,6 @@ function MainSearch() {
 
     return (
         <div className="mx-2 sm:mx-4 text-center">
-
-
             <div className="flex flex-col sm:flex-row sm:justify-center sm:h-10 sm:mt-10">
                 <div className="flex justify-center items-center px-2 my-2">ORIGIN</div>
                 <Select className="sm:w-1/4 shadow-md" styles={customStyle} options={origins} value={originChoice} onChange={choice => setOriginChoice(choice, getRoutes(choice.value, priceList.legs))}/>
@@ -75,17 +74,14 @@ function MainSearch() {
                 <Select className="sm:w-1/4 text-black shadow-md" options={destinations} value={destinationChoice} onChange={(choice) => setDestinationChoice(choice)}/>
                 <button className="sm:w-1/6 my-4 py-2 sm:my-0 sm:mx-4 bg-white text-black rounded-full shadow-md enabled:hover:text-white enabled:hover:bg-indigo-800" onClick={handleShowResults} disabled={(!destinationChoice) ? true : false}>search</button>
             </div>
-
-
+            {/* If the search button is pressed, show the route table */}
             {
                 showResults &&
                 <RouteTable route={routeChosen} priceList={priceList}/>
             }
-
             <div className="py-10">
                 <p>pricelist valid until: {formatTime(createDate(priceList.validUntil))}</p>
             </div>
-
         </div>
     )
 };

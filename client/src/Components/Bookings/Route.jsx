@@ -1,8 +1,8 @@
 import React from "react";
 import { formatTime, formatDuration } from '../../helpers/flightTime';
 
+// displays route information about a specific booking
 function Route(props) {
-
     return (
         <div className="m-4 border flex flex-col p-2 border-indigo-700 shadow">
             <div className="mx-auto">
@@ -26,16 +26,3 @@ function Route(props) {
 }
 
 export default Route;
-
-/*
-props.data.provider.company
-props.data.provider.distance
-props.data.provider.flightStart (needs formatting)
-props.data.provider.flightEnd (needs formationg)
-props.data.provider.flightTime (needs formatting)
-props.data.provider.price 
-/props.data.routeFrom
-/props.datarouteTo
-
-
-*/

@@ -30,5 +30,5 @@ The Web App shows different routes and deals to travel within the solar system. 
     - Configure "remoteDBURL" to use your remote database
 
 ## Additional notes
-- Since the assignment was relatively time-consuming (though thoroughly interesting), I did not spend much extra time writing automated tests or taking care of edge cases.
+- Since the assignment was relatively time-consuming (though thoroughly interesting), not much effort was put into writing automated tests or taking care of edge cases.
 - If the server is started on a new and empty *remote* server, it may send an error message and fail the first time (asynchronous issue). Simply run it again if it happens and everything should work.

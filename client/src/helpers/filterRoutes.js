@@ -1,4 +1,4 @@
-
+// Returns an array of all possible origins from the given pricelist
 const getAllOrigins = (priceList) => {
     let originArray = [];
 
@@ -19,6 +19,7 @@ const getAllOrigins = (priceList) => {
     return originsObjects;
 }
 
+// Returns an array of all possible destinations based on the given origin and the given pricelist
 const getAllDestinations = (possibleRoutesArray) => {
     let routeObjects = [];
     possibleRoutesArray.forEach(route => {
@@ -31,21 +32,7 @@ const getAllDestinations = (possibleRoutesArray) => {
     return routeObjects;
 }
 
-
-
-// // returns array of all origin locations. Locations are objects that have a label and a value property
-// const getAllOrigins = (routeList) => {
-//     let originArray = [];
-
-//     routeList.forEach(route => {
-//         if (!originArray.includes(route.routeInfo.from.name)) {
-//             originArray.push(route.routeInfo.from.name);
-//         };
-//     });  
-    
-//     return originArray;
-// };
-
+// Returns an array of all possible routes based on the given origin and a route array (each route is an object from the pricelist)
 const getPossibleRoutes = (origin, routeList) => {
 
     if (!Array.isArray(routeList)) return;

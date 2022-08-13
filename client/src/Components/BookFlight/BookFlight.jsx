@@ -46,11 +46,8 @@ function BookFlight() {
             </div>
             <div className="flex flex-col items-center mt-10 w-full sm:w-auto">
                 <h3 className="text-center mb-4 cursor-default">Enter your details to book your flight</h3>
-
                 <BookingForm {...props} />
             </div>
-            
-
         </div>
     )
 }
