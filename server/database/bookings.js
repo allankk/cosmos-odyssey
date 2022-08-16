@@ -66,7 +66,6 @@ const deleteOldBookings = async (priceListID) => {
     
     deleteOldUsers();
     updateTotalquotes();
-
 }
 
 // deletes users that have no more bookings from the database
@@ -76,7 +75,6 @@ const deleteOldUsers = () => {
     } catch (e) {
         print (e);
     };
-
 }
 
 
